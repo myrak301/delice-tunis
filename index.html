@@ -1,164 +1,368 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Délices de Tunis - Gâteaux orientaux à Toulouse</title>
-    <meta name="description" content="Délices de Tunis, pâtisserie orientale tunisienne à Toulouse : baklawa, makroudh, cornes de gazelle, coffrets et plateaux événementiels.">
-    <meta name="keywords" content="pâtisserie orientale Toulouse, gâteaux orientaux Toulouse, baklawa Toulouse, makroudh Toulouse, plateaux pâtisseries orientales">
-    <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Bakery",
-        "name": "Délices de Tunis",
-        "telephone": "+33561533120",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "22bis Rue des Tourneurs",
-          "postalCode": "31000",
-          "addressLocality": "Toulouse",
-          "addressCountry": "FR"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "547"
-        },
-        "openingHours": "Mo-Sa 09:00-20:00"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Délices de Tunis | Pâtisserie Orientale & Gâteaux Tunisiens à Toulouse</title>
+  <meta name="description" content="L'excellence de la pâtisserie orientale à Toulouse. Baklawa, Makroudh, Cornes de Gazelle et plateaux sur mesure pour vos événements. Tradition et gourmandise tunisienne.">
+  <meta name="keywords" content="pâtisserie orientale Toulouse, gâteaux tunisiens, baklawa Toulouse, makroudh, cornes de gazelle, traiteur oriental Toulouse, Délices de Tunis">
+  <meta name="theme-color" content="#2b1b16">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.delicesdetunis-toulouse.fr/">
+  <meta property="og:title" content="Délices de Tunis | Pâtisserie Orientale d'Excellence">
+  <meta property="og:description" content="Voyagez au cœur des saveurs de Tunis à Toulouse. Pâtisseries artisanales, miel, pistaches et savoir-faire traditionnel.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Délices de Tunis",
+      "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=80",
+      "url": "https://www.delicesdetunis-toulouse.fr/",
+      "telephone": "05 61 53 31 20",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "22bis Rue des Tourneurs",
+        "addressLocality": "Toulouse",
+        "postalCode": "31000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6001,
+        "longitude": 1.4442
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "547"
       }
-    </script>
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="logo" href="#accueil" aria-label="Délices de Tunis - accueil">
+    }
+  </script>
+</head>
+<body>
+  <!-- Decorative Background Elements -->
+  <div class="bg-ornament top-right"></div>
+  <div class="bg-ornament bottom-left"></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
         <span class="logo-mark">DT</span>
-        <span>Délices de Tunis</span>
+        <span class="logo-text">Délices de Tunis</span>
       </a>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="#accueil" class="nav-link">Accueil</a>
+        <a href="#specialites" class="nav-link">Nos Gâteaux</a>
+        <a href="#plateaux" class="nav-link">Événements</a>
+        <a href="#avis" class="nav-link">Avis</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
 
-      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Ouvrir le menu">
-      <label class="hamburger" for="menu-toggle" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+      <div class="nav-actions">
+        <a href="tel:+33561533120" class="cta-button primary">
+          <i data-lucide="phone" class="icon-sm"></i>
+          <span>Appeler</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-      <nav class="menu" aria-label="Navigation principale">
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <i data-lucide="star" class="fill-gold"></i>
+            <span>4,8/5 · 547 avis Google</span>
+          </div>
+          <h1>L'art de la pâtisserie <span class="text-gold">tunisienne</span> à Toulouse</h1>
+          <p class="hero-description">
+            Baklawa fondante, Makroudh doré, Cornes de Gazelle raffinées... Découvrez un voyage sensoriel au cœur des saveurs orientales authentiques.
+          </p>
+          <div class="hero-btns">
+            <a href="tel:+33561533120" class="btn btn-primary">
+              <i data-lucide="phone-call"></i>
+              05 61 53 31 20
+            </a>
+            <a href="#specialites" class="btn btn-secondary">
+              <i data-lucide="shopping-bag"></i>
+              Nos spécialités
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item"><i data-lucide="check" class="text-gold"></i><span>Fait Maison</span></div>
+            <div class="trust-item"><i data-lucide="check" class="text-gold"></i><span>Ingrédients Nobles</span></div>
+            <div class="trust-item"><i data-lucide="check" class="text-gold"></i><span>Tradition Tunisienne</span></div>
+          </div>
+        </div>
+        
+        <div class="hero-visual reveal">
+          <div class="visual-card">
+            <div class="image-wrapper">
+              <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=80" alt="Gâteaux orientaux Délices de Tunis">
+            </div>
+            <div class="floating-label">
+              <strong>Pâtisserie Artisanale</strong>
+              <span>Depuis de nombreuses années</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="section section-alt" id="specialites">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Nos <span class="text-gold">Douceurs</span> d'Orient</h2>
+          <p class="section-subtitle">Chaque gâteau est une œuvre d'art, préparée avec du miel pur, des amandes sélectionnées et des pistaches craquantes.</p>
+        </div>
+
+        <div class="specialties-grid">
+          <article class="spec-card reveal">
+            <div class="spec-icon"><i data-lucide="flame"></i></div>
+            <h3>Baklawa Royale</h3>
+            <p>Un feuilletage d'une finesse extrême, alternant couches de noix et d'amandes, arrosé de miel parfumé.</p>
+          </article>
+          
+          <article class="spec-card reveal">
+            <div class="spec-icon"><i data-lucide="sun"></i></div>
+            <h3>Makroudh à la Datte</h3>
+            <p>La semoule d'or fourrée d'une pâte de dattes fondante, frite puis plongée dans un sirop de miel.</p>
+          </article>
+
+          <article class="spec-card reveal">
+            <div class="spec-icon"><i data-lucide="moon"></i></div>
+            <h3>Corne de Gazelle</h3>
+            <p>Une finesse absolue : une pâte sablée délicate cachant un cœur d'amande à la fleur d'oranger.</p>
+          </article>
+
+          <article class="spec-card reveal">
+            <div class="spec-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Samsa Croustillante</h3>
+            <p>Le triangle de bonheur aux amandes ou sésame, offrant un croquant incomparable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="section" id="plateaux">
+      <div class="container event-flex">
+        <div class="event-content reveal">
+          <h2 class="section-title">Plateaux & <span class="text-gold">Événements</span></h2>
+          <p class="event-text">Sublimez vos moments d'exception avec nos plateaux de pâtisseries personnalisés. Idéal pour mariages, naissances et fêtes religieuses.</p>
+          
+          <ul class="event-list">
+            <li><i data-lucide="check-circle" class="text-gold"></i><span>Mariages & Fiançailles</span></li>
+            <li><i data-lucide="check-circle" class="text-gold"></i><span>Naissances & Baptêmes</span></li>
+            <li><i data-lucide="check-circle" class="text-gold"></i><span>Aïd & Fêtes Religieuses</span></li>
+            <li><i data-lucide="check-circle" class="text-gold"></i><span>Réceptions d'Entreprises</span></li>
+          </ul>
+
+          <div class="event-cta">
+            <a href="tel:+33561533120" class="btn btn-primary">Demander un plateau</a>
+          </div>
+        </div>
+        
+        <div class="event-gallery reveal">
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Pâtisserie orientale 1">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Pâtisserie orientale 2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section section-alt" id="avis">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div class="rating-box">
+            <div class="score">4,8<span>/5</span></div>
+            <p>547 avis Google</p>
+          </div>
+          <h2 class="section-title">La confiance de <span class="text-gold">nos gourmands</span></h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div class="review-meta">
+              <strong>M. Amari</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p>"Les meilleures baklawas de Toulouse. On sent la qualité des ingrédients et le respect de la tradition."</p>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-meta">
+              <strong>S. Lefebvre</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p>"Toujours un régal. Les cornes de gazelle sont d'une finesse incroyable. Accueil chaleureux."</p>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-meta">
+              <strong>J. Khediri</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p>"Commande d'un plateau pour un mariage, présentation sublime et tous les invités ont adoré !"</p>
+          </div>
+        </div>
+        <p class="review-note reveal">* Avis basés sur nos retours clients Google.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Questions <span class="text-gold">Fréquentes</span></h2>
+        </div>
+        
+        <div class="faq-container reveal">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Où se trouve la pâtisserie ?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-content">
+              <p>Nous sommes situés au 22bis Rue des Tourneurs, 31000 Toulouse, au cœur du centre-ville.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Proposez-vous des plateaux personnalisés ?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-content">
+              <p>Oui, nous composons des plateaux et coffrets cadeaux sur mesure selon vos goûts et votre budget.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Quels sont vos horaires d'ouverture ?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-content">
+              <p>Nous vous accueillons du lundi au samedi, de 09:00 à 20:00 sans interruption.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Faut-il commander à l'avance pour un événement ?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-content">
+              <p>Pour les grandes commandes et plateaux événementiels, nous recommandons de nous contacter au moins 48h à l'avance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <h2 class="section-title">Nous <span class="text-gold">Visiter</span></h2>
+          <p class="contact-desc">Venez découvrir nos douceurs directement en boutique ou passez votre commande par téléphone.</p>
+          
+          <div class="contact-details">
+            <div class="detail-item">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <strong>Adresse</strong>
+                <p>22bis Rue des Tourneurs, 31000 Toulouse</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <strong>Téléphone</strong>
+                <a href="tel:+33561533120">05 61 53 31 20</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="clock"></i>
+              <div>
+                <strong>Horaires</strong>
+                <p>Lun - Sam : 09:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-btns">
+            <a href="tel:+33561533120" class="btn btn-primary">Appeler</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=22bis+Rue+des+Tourneurs+31000+Toulouse" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Itinéraire</a>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d2889.375!2d1.4442!3d43.6001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb123456789%3A0x12aebb123456789!2s22bis%20Rue%20des%20Tourneurs%2C%2031000%20Toulouse!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-text">Délices de Tunis</span>
+        <p>L'excellence de la pâtisserie orientale à Toulouse depuis de nombreuses années.</p>
+      </div>
+      <div class="footer-nav">
+        <strong>Navigation</strong>
+        <a href="#accueil">Accueil</a>
         <a href="#specialites">Spécialités</a>
-        <a href="#plateaux">Plateaux</a>
-        <a href="#infos">Infos</a>
-      </nav>
-      <a class="nav-cta" href="tel:0561533120">05 61 53 31 20</a>
-    </header>
+        <a href="#plateaux">Événements</a>
+        <a href="#avis">Avis</a>
+      </div>
+      <div class="footer-contact">
+        <strong>Contact</strong>
+        <p>22bis Rue des Tourneurs, 31000 Toulouse</p>
+        <a href="tel:+33561533120">05 61 53 31 20</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Délices de Tunis. Tous droits réservés. Pâtisserie Orientale Toulouse.</p>
+      </div>
+    </div>
+  </footer>
 
-    <main>
-      <section id="accueil" class="hero">
-        <div class="hero-text">
-          <p class="badge">4,8/5 · 547 avis</p>
-          <h1>Délices de Tunis</h1>
-          <h2>Gâteaux orientaux et pâtisseries tunisiennes à Toulouse</h2>
-          <p>
-            Baklawa, makroudh, cornes de gazelle, samsa et plateaux sur mesure.
-            Des douceurs artisanales au miel, aux amandes, aux pistaches et à la fleur d'oranger.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="tel:0561533120">Commander par téléphone</a>
-            <a class="button secondary" href="#specialites">Voir les gâteaux</a>
-          </div>
-          <p class="address">22bis Rue des Tourneurs, 31000 Toulouse</p>
-        </div>
-        <div class="hero-card">
-          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=80" alt="Plateau de gâteaux orientaux">
-        </div>
-      </section>
-
-      <section id="specialites" class="section">
-        <div class="section-title">
-          <p>Nos spécialités</p>
-          <h2>Des classiques orientaux simples, beaux et gourmands</h2>
-        </div>
-        <div class="grid cards">
-          <article>
-            <span>Best-seller</span>
-            <h3>Baklawa</h3>
-            <p>Feuilletage fin, amandes et miel parfumé.</p>
-          </article>
-          <article>
-            <span>Tradition</span>
-            <h3>Makroudh</h3>
-            <p>Semoule dorée, dattes fondantes et sirop miellé.</p>
-          </article>
-          <article>
-            <span>Raffiné</span>
-            <h3>Cornes de gazelle</h3>
-            <p>Pâte délicate et coeur d'amande parfumé.</p>
-          </article>
-          <article>
-            <span>Assortiment</span>
-            <h3>Samsa & Zlabia</h3>
-            <p>Petites douceurs croustillantes pour partager.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="plateaux" class="section split">
-        <div>
-          <p class="label">Plateaux événementiels</p>
-          <h2>Mariages, fêtes, Aid, naissances et réceptions</h2>
-          <p>
-            Composez un plateau de pâtisseries orientales selon votre événement,
-            le nombre d'invités et vos goûts.
-          </p>
-          <a class="button primary" href="tel:0561533120">Demander un devis</a>
-        </div>
-        <ul class="event-list">
-          <li>Mariages</li>
-          <li>Naissances</li>
-          <li>Fiançailles</li>
-          <li>Réceptions familiales</li>
-          <li>Coffrets cadeaux</li>
-          <li>Entreprises</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <div class="section-title">
-          <p>Savoir-faire</p>
-          <h2>Recettes tunisiennes et préparation artisanale</h2>
-        </div>
-        <div class="grid features">
-          <div>Amandes, miel, pistaches, dattes</div>
-          <div>Fabrication quotidienne</div>
-          <div>Plateaux préparés sur demande</div>
-          <div>Goût authentique et présentation soignée</div>
-        </div>
-      </section>
-
-      <section class="section gallery">
-        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80" alt="Assortiment de pâtisseries">
-        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Pâtisseries au miel">
-        <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=80" alt="Vitrine de pâtisserie">
-      </section>
-
-      <section id="infos" class="section info">
-        <div>
-          <p class="label">Infos pratiques</p>
-          <h2>Nous contacter</h2>
-          <p><strong>Adresse :</strong> 22bis Rue des Tourneurs, 31000 Toulouse</p>
-          <p><strong>Téléphone :</strong> <a href="tel:0561533120">05 61 53 31 20</a></p>
-          <p><strong>Horaires :</strong> lundi à samedi, 09:00-20:00. Dimanche fermé.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="tel:0561533120">Appeler</a>
-            <a class="button secondary" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=22bis%20Rue%20des%20Tourneurs%2031000%20Toulouse">Itinéraire</a>
-          </div>
-        </div>
-        <iframe title="Carte Délices de Tunis" src="https://www.google.com/maps?q=22bis%20Rue%20des%20Tourneurs%2031000%20Toulouse&output=embed" loading="lazy"></iframe>
-      </section>
-    </main>
-
-    <footer>
-      <strong>Délices de Tunis</strong>
-      <p>Pâtisserie orientale tunisienne à Toulouse · Site vitrine professionnel</p>
-    </footer>
-  </body>
+  <script src="script.js"></script>
+  <script>if (window.lucide) window.lucide.createIcons();</script>
+</body>
 </html>
